@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4: Introduction to Functions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .output-section {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        .output-section h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .code-block {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lab 4: Introduction to Functions</h1>
+        <p>This page demonstrates JavaScript functions as required for the lab assignment.</p>
+        
+        <div class="output-section">
+            <h2>Part 1: Declaring and Invoking Functions</h2>
+            <p>Check the browser console for output from the greet function.</p>
+            <button onclick="testGreet()">Test Greet Function</button>
+        </div>
+        
+        <div class="output-section">
+            <h2>Part 2: Working with Parameters and Returning Values</h2>
+            <p>Check the browser console for output from the addNumbers function.</p>
+            <button onclick="testAddNumbers()">Test Add Numbers Function</button>
+        </div>
+        
+        <div class="output-section">
+            <h2>Part 3: Function Scope</h2>
+            <p>Check the browser console for output demonstrating scope behavior.</p>
+            <button onclick="testScope()">Test Scope Behavior</button>
+        </div>
+        
+        <div class="output-section">
+            <h2>Part 4: Closures</h2>
+            <p>Check the browser console for output from the closure example.</p>
+            <button onclick="testClosure()">Test Closure Function</button>
+        </div>
+        
+        <div class="output-section">
+            <h2>Bonus Challenge</h2>
+            <p>Check the browser console for output from the bonus challenge functions.</p>
+            <button onclick="testBonus()">Test Bonus Functions</button>
+        </div>
+        
+        <div class="code-block">
+            <h3>JavaScript Code Overview</h3>
+            <pre>
+// Part 1: Simple function
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+// Part 2: Function with parameters and return value
+function addNumbers(num1, num2) {
+    return num1 + num2;
+}
+
+// Part 3: Function scope example
+let x = 10;
+
+function changeValue() {
+    let x = 20; // This creates a new local variable
+    console.log("Inside function, x =", x);
+}
+
+// Part 4: Closure example
+function outerFunction() {
+    let count = 0;
+    return function() {
+        count++;
+        return count;
+    };
+}
+
+// Bonus: Default parameter
+function greetWithDefault(name = "Guest") {
+    return `Hello, ${name}!`;
+}
+            </pre>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
